@@ -3,35 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>on demo</title>
-  <style>
-  div {
-    color: red;
-  }
-  </style>
   <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </head>
 <body>
-    <h1> Welcome,name of the sweet is  ......</h1>
-<select name="sweets" multiple="multiple">
-  <option>Chocolate</option>
-  <option selected="selected">Candy</option>
-  <option>Taffy</option>
-  <option selected="selected">Caramel</option>
-  <option>Fudge</option>
-  <option>Cookie</option>
-</select>
-<div></div>
+    <button onclick="cngcolor()">Click here</button>
+    <div id="mydiv" style="width:50;height:3 0px;background-color: yellow;color: aqua ;">HELLO</div>
  
 <script>
-$( "select" )
-  .on( "change", function() {
-    var str = "";
-    $( "select option:selected" ).each( function() {
-      str += $( this ).text() + " ";
-    } );
-    $( "div" ).text( str );
-  } )
-  .trigger( "change" );
+    var i=0
+    function cngcolor(){
+        if(i%2==0){
+            $("#mydiv").css("background","red")
+        }
+        else{
+            $("#mydiv").css("background","yellow")
+        }
+        i++
+    }
 </script>
  
 </body>
